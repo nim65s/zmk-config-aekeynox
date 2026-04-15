@@ -14,7 +14,7 @@
 // #define KB_LAYOUT_BEPO
 // #define KB_LAYOUT_BEPOLAR
 // #define KB_LAYOUT_DVORAK
-// #define KB_LAYOUT_ERGOL
+#define KB_LAYOUT_ERGOL
 // #define KB_LAYOUT_ERGLACE
 // #define KB_LAYOUT_QWERTY_INTL
 // #define KB_LAYOUT_QWERTY_LAFAYETTE
@@ -23,7 +23,7 @@
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
 // #define MACOS
-// #define LINUX
+#define LINUX
 
 
 /******************************************************************************
@@ -64,7 +64,7 @@
 
 // #define HT_NONE
 // #define HT_THUMB_TAPS
-// #define HT_HOME_ROW_MODS  // (default behavior)
+#define HT_HOME_ROW_MODS // (default behavior)
 // #define HT_TWO_THUMB_KEYS
 
 // Timing is key! Keep the default value if unsure.
@@ -73,7 +73,7 @@
 // are the ones that may produce text, including the space bar and home row mods.
 // Keep this value high if you struggle with home row mods.
 
-// #define TAPPING_TERM 300
+#define TAPPING_TERM 180
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
@@ -86,7 +86,7 @@
 // key presses is lower than `QUICK_TAP`, the tap-hold will hold the tap action
 // instead of the hold action. Again, keep the default value if unsure.
 
-// #define QUICK_TAP 200
+#define QUICK_TAP 150
 
 // For more information on how hold-taps operate, feel free to read ZMK’s docs:
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap
@@ -102,7 +102,7 @@
 //  + Escape under the left thumb (direct access)
 // Highly recommended for Vim users, obviously. :-)
 
-// #define VIM_NAVIGATION
+#define VIM_NAVIGATION
 
 // [Experimental]
 // Uncomment the following line to enable the "mod-hold behavior" on the left
@@ -127,4 +127,4 @@
 // Uncomment the following line to swap Space and Backspace.
 // Beware: this increases the typing load of the left thumb.
 
-// #define LEFT_HAND_SPACE
+#define LEFT_HAND_SPACE
