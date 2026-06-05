@@ -74,6 +74,46 @@
   };
 };
 
+// Linux unicode
+#ifdef LINUX
+/ {
+  macros {
+    uc21xx: uc21xx {
+      compatible = "zmk,behavior-macro-two-param";
+      #binding-cells = <2>;
+      tap-ms = <0>;
+      wait-ms = <0>;
+      bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_press &kp LSHIFT>
+        , <&macro_tap &kp SEMI>  // U but in Ergo-L
+        , <&macro_release &kp LCTRL>
+        , <&macro_release &kp LSHIFT>
+        , <&macro_tap &kp N2 &kp N1>
+        , <&macro_param_1to1 &kp MACRO_PLACEHOLDER>
+        , <&macro_param_2to1 &kp MACRO_PLACEHOLDER>
+        , <&macro_tap &kp ENTER>
+        ;
+    };
+  };
+};
+
+// https://unicode.org/charts/nameslist/n_2190.html
+#define UC_LEFTWARDS_ARROW         &uc21xx N9 N0 // ←
+#define UC_UPWARDS_ARROW           &uc21xx N9 N1 // ↑
+#define UC_RIGHTWARDS_ARROW        &uc21xx N9 N2 // →
+#define UC_DOWNWARDS_ARROW         &uc21xx N9 N3 // ↓
+#define UC_LEFT_RIGHT_ARROW        &uc21xx N9 N4 // ↔
+#define UC_UP_DOWN_ARROW           &uc21xx N9 N5 // ↕
+#define UC_LEFTWARDS_DOUBLE_ARROW  &uc21xx D  N0 // ⇐
+#define UC_UPWARDS_DOUBLE_ARROW    &uc21xx D  N1 // ⇑
+#define UC_RIGHTWARDS_DOUBLE_ARROW &uc21xx D  N2 // ⇒
+#define UC_DOWNWARDS_DOUBLE_ARROW  &uc21xx D  N3 // ⇓
+#define UC_LEFT_RIGHT_DOUBLE_ARROW &uc21xx D  N4 // ⇔
+#define UC_UP_DOWN_DOUBLE_ARROW    &uc21xx D  N5 // ⇕
+
+#endif
+
 // Windows Alt-Code Inputs
 // There are three kinds of Alt-Codes:
 //  - Alt+[128-255]   = Code Page 437 (IBM/DOS)
