@@ -1,10 +1,9 @@
-// By default, the firmware will be built with HRM support for a QWERTY computer.
-// Uncomment definitions in this file to activate options.
-
+// By default, the firmware will be built with HRM support for a QWERTY
+// computer. Uncomment definitions in this file to activate options.
 
 /******************************************************************************
  * Host Computer (keyboard layout and OS)
-******************************************************************************/
+ ******************************************************************************/
 
 // Uncomment one of the following lines if the host computer is configured with
 // a non-QWERTY keyboard layout. This is required to set an appropriate
@@ -25,10 +24,9 @@
 // #define MACOS
 #define LINUX
 
-
 /******************************************************************************
  * Layout Emulation
-******************************************************************************/
+ ******************************************************************************/
 
 // [Experimental]
 // Uncomment one of the following lines to enable layout emulation,
@@ -44,7 +42,8 @@
 
 // [Experimental]
 // Uncomment the following line for an extended character support on Windows.
-// Useless on QWERTY/English keymaps or non-Windows hosts, recommended otherwise.
+// Useless on QWERTY/English keymaps or non-Windows hosts, recommended
+// otherwise.
 // XXX This assumes NumLock is ON. It will not work otherwise.
 
 // #define ENABLE_CP1252_ALT_CODES
@@ -55,10 +54,9 @@
 
 // #define ENABLE_FANCY_DEAD_KEYS
 
-
 /******************************************************************************
  * Hold-Taps
-******************************************************************************/
+ ******************************************************************************/
 
 // Uncomment one of the following lines to pick your preferred hold-tap config.
 
@@ -70,10 +68,10 @@
 // Timing is key! Keep the default value if unsure.
 // This defines how long (in ms) a hold-tap key with the "tap-preferred" flavor
 // must be held to be considered as a modifier or layer shift. These hold-taps
-// are the ones that may produce text, including the space bar and home row mods.
-// Keep this value high if you struggle with home row mods.
+// are the ones that may produce text, including the space bar and home row
+// mods. Keep this value high if you struggle with home row mods.
 
-#define TAPPING_TERM 180
+#define TAPPING_TERM 170
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
@@ -86,15 +84,14 @@
 // key presses is lower than `QUICK_TAP`, the tap-hold will hold the tap action
 // instead of the hold action. Again, keep the default value if unsure.
 
-#define QUICK_TAP 150
+#define QUICK_TAP 140
 
 // For more information on how hold-taps operate, feel free to read ZMK’s docs:
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap
 
-
 /******************************************************************************
  * Other Options
-*****************************************************************************/
+ *****************************************************************************/
 
 // Uncomment the following line to split the NavNum layer in two:
 //  - one layer for vim-style navigation (right) and GUI shortcuts (left)
@@ -108,7 +105,8 @@
 // Uncomment the following line to enable the "mod-hold behavior" on the left
 // hand’s navigation layer key. Enabling this means that if the Alt key is held
 // when entering the navigation layer, Alt will only be released when nav is
-// released. This enables one-handed alt-tabs, but may cause unwanted side effects.
+// released. This enables one-handed alt-tabs, but may cause unwanted side
+// effects.
 
 // #define ENABLE_MOD_HOLD_NAVIGATION
 
